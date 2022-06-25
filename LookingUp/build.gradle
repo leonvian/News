@@ -1,0 +1,36 @@
+buildscript {
+    ext {
+        ext.versions = [
+                'compose': '1.1.1'
+        ]
+
+        ext.deps = [
+                compose: [
+                        'ui'                        : "androidx.compose.ui:ui:${versions.compose}",
+                        'uiTooling'                 : "androidx.compose.ui:ui-tooling:${versions.compose}",
+                        'uiToolingPreview'          : "androidx.compose.ui:ui-tooling-preview:${versions.compose}",
+                        'foundation'                : "androidx.compose.foundation:foundation:${versions.compose}",
+                        'activity'                  : "androidx.activity:activity-compose:${versions.composeActivity}",
+                        'material'                  : "androidx.compose.material:material:${versions.compose}",
+                        'accompanistInsets'         : "com.google.accompanist:accompanist-insets:${versions.accompanist}",
+                        'accompanistPager'          : "com.google.accompanist:accompanist-pager:${versions.accompanist}",
+                        'accompanistPagerIndicators': "com.google.accompanist:accompanist-pager-indicators:${versions.accompanist}",
+                        'testing'                   : "androidx.compose.ui:ui-test:${versions.compose}",
+                        'uiTesting'                 : "androidx.compose.ui:ui-test-junit4:${versions.compose}",
+                        'uiTestManifest'            : "androidx.compose.ui:ui-test-manifest:${versions.compose}",
+                        'runtimeLivedata'           : "androidx.compose.runtime:runtime-livedata:${versions.compose}",
+                        'uiViewbinding'             : "androidx.compose.ui:ui-viewbinding:${versions.compose}",
+                        'uiUtil'                    : "androidx.compose.ui:ui-util:${versions.compose}"
+                ]
+        ]
+    }
+}// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '7.1.2' apply false
+    id 'com.android.library' version '7.1.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
